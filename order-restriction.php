@@ -54,7 +54,28 @@ function disable_checkout_under_minimum() {
         exit;
     }
 }
-add_action( 'wp_load', 'disable_checkout_under_minimum' );
+add_action( 'template_redirect', 'disable_checkout_under_minimum' );
+
+
+
+
+
+  function custom_cart_notice() {
+    // Minimum order amount get from settings
+    $minimum_amount = get_option( 'ortn_minimum_amount', 150 );
+    
+    // Calculate total cart amount
+    $cart_total = WC()->cart->get_cart_contents_total();
+    if ( $cart_total < $minimum_amount ) {
+      echo '<div class="woocommerce-message">This is a custom notice on the cart page.</div>';
+    }    
+  }
+  add_action('woocommerce_before_cart', 'custom_cart_notice', 10 );
+
+
+
+
+
 
 
 // plugin customization setting
