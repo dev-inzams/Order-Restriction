@@ -1,35 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .ortn-section{
-    display: flex;
-    height: 75vh;
-    width: 920px;
+    width: 1080px;
     margin: 0;
     font-family: Arial, sans-serif; 
 }
 
-.right-side {
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.left-side {
-    flex: 2;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #f0f0f0;
-}
-.right-side {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
 h1 {
     margin-bottom: 20px;
 }
-.input-group {
-    margin-bottom: 15px;
+
+p.description {
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
+
 label {
     display: block;
     margin-bottom: 5px;
@@ -40,30 +31,25 @@ input[type="text"], input[type="email"], input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-input[type="number"], input[type="email"], input[type="password"] {
+input[type="number"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-.buttons {
-    margin-top: 20px;
-}
-.buttons button {
-    margin: 5px;
-    padding: 10px 20px;
-    border: none;
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    cursor: pointer;
+    box-sizing: border-box;
 }
-.buttons .btn-primary {
-    background-color: #007bff;
-    color: white;
+option {
+    padding: 10px;
 }
-.buttons .btn-secondary {
-    background-color: #6c757d;
-    color: white;
-}
+
+
 .image-container img {
     max-width: 60%;
     border-radius: 8px;
